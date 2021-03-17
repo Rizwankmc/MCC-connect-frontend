@@ -1,0 +1,126 @@
+.login-form {
+  z-index: 2;
+  max-width: 520px;
+  position: relative;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  margin: 0px auto;
+  padding: 50px 70px;
+  border-radius: 10px;
+  background-color: white;
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  border-left: 2px solid #e8f0fe;
+  border-top: 2px solid #e8f0fe;
+}
+.login-page {
+  background-color: black;
+  height: 100%;
+  padding: 100px 0px;
+  /* background: linear-gradient(to top right, #064d93, #313e4b); */
+  background:linear-gradient(to top right, #000000, #262f71);
+}
+.circle-one {
+  left: 25%;
+  position: absolute;
+  height: 140px;
+  width: 140px;
+  background-color: #0f72a1;
+  top: 40px;
+  border-radius: 50%;
+}
+.circle-two {
+  right: 24%;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background-color: #ff194a;
+  bottom: 60px;
+  /* margin-bottom: 0px; */
+  border-radius: 50%;
+}
+
+
+
+.login-form h6 {font-size: 25px;margin-bottom: 0px;color: white;font-weight: 500;}
+
+.login-form p {
+    font-size: 14px;
+    color: white;
+    font-weight: 300;
+}
+
+.login-form .form-group label {
+    color: white;
+    font-weight: 300;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+.login-form form {
+    padding-top: 25px;
+}
+.login-form button {
+  background-color: #ff194a !important;
+  border: 1px solid #ff194a !important;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.login-form button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control {
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+}
+.login-form form h6 {
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.login-form form h6 span {
+  color: #f10638;
+  font-weight: 500;
+}
+.login-form form input::placeholder {
+  color: #ded8d8 !important;
+  font-weight: 300;
+}
+
+.forget-pwd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.forget-pwd h6 {
+  margin-top: 0px !important;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 13px !important;
+}
+.circle-three {
+  right: 24%;
+  height: 80px;
+  width: 80px;
+  background-color: #0f72a1;
+  bottom: 0;
+  border-radius: 50%;
+  position: absolute;
+}
+.circle-four {
+  left: 24%;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background-color: #ff194a;
+  top: 0;
+  border-radius: 50%;
+}

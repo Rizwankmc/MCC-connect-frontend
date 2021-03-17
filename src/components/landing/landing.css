@@ -1,0 +1,167 @@
+.landing-header .navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding: 10px 25px;
+    margin: 0px 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.landing-banner{
+    background: url(../../assets/hero-1.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.landing-header {
+    position: relative;
+    background-color: transparent;
+}
+.landing-header .bg-light {
+    background-color: #f8f9fa00!important;
+}
+.landing-banner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 8, 29, 0.7);
+    top: 0;
+    left: 0;
+    right: 0px;
+    bottom: 0px;
+}
+.landing-header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid #67666d;
+}
+.landing-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: calc(100% - 10%);
+    margin-top: 50px;
+  }
+
+.landing-header .navbar-light .navbar-brand {
+    color: rgb(26 185 177);
+    font-weight: 900;
+    font-size: 30px;
+}
+.landing-content h6 {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.fancy-btn {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 44px;
+    padding: 0 15px;
+    width: 160px;
+    height: 46px;
+    border-left: 2px solid #7450fe;
+    border-right: 2px solid #21d397;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background: -webkit-linear-gradient(left, #7450fe 0%, #21d397 100%), -webkit-linear-gradient(left, #7450fe 0%, #21d397 100%);
+    background: linear-gradient(to right, #7450fe 0%, #21d397 100%), linear-gradient(to right, #7450fe 0%, #21d397 100%);
+    -webkit-transition-duration: 1000ms;
+    transition-duration: 1000ms;
+    position: relative;
+    z-index: 1;
+}
+.fancy-outline{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 44px;
+    padding: 0 15px;
+    width: 160px;
+    height: 46px;
+    border-left: 2px solid #7450fe;
+    border-right: 2px solid #21d397;
+    border-top:2px solid #7450fe ;
+    border-bottom: 2px solid #21d397;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    -webkit-transition-duration: 1000ms;
+    transition-duration: 1000ms;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    transition-delay: .5s;
+}
+.fancy-outline:hover{
+    background: -webkit-linear-gradient(left, #7450fe 0%, #21d397 100%), -webkit-linear-gradient(left, #7450fe 0%, #21d397 100%);
+    background: linear-gradient(to right, #7450fe 0%, #21d397 100%), linear-gradient(to right, #7450fe 0%, #21d397 100%);
+    transition-delay: .5s;
+}
+.fancy-btn:after {
+    color: #fff;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    background: #7450fe;
+    background: -webkit-linear-gradient(to right, #7450fe, #21d397) !important;
+    background: -webkit-linear-gradient(left, #7450fe, #21d397) !important;
+    background: linear-gradient(to right, #7450fe, #21d397) !important;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 2px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.banner-btn button{
+margin: 5px;
+}
+.landing-header nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    margin: 5px 0px;
+}
+.about-img img {
+    height: 350px;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.about-area{
+    margin: 120px 0px;
+}
+.about-us-text > h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+.about-us-text > p {
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    color: #51545f;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 400;
+}
+.fancy-btn.fancy-dark {
+    color: #232d37 !important;
+}
+a.btn.fancy-outline.fancy-dark {
+    color: #232d37 !important;
+}
+.landing-page{
+    background:linear-gradient(to top right, #000000, #262f71);
+}

@@ -1,0 +1,86 @@
+.header .bg-light {
+    background-color: #282376!important;
+}
+.header {
+    background-color: #282376!important;
+}
+.header .navbar-brand img {
+    height: 40px;
+}
+
+.header .navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding: 5px 20px;
+    font-weight: 400;
+    font-size: 13px;
+    display: grid;
+    text-align: center;
+}
+.header input {
+    width: 100% !important;
+    background-color: #fff;
+    height: 38px !important;
+    color: #b2b2b2;
+    font-size: 12px !important;
+    border: 0 !important;
+    padding: 0 10px !important;
+}
+
+.my-profile-menu {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+}
+
+.p-pic img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.p-name h5 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.p-name {
+    padding-left: 10px;
+}
+
+.my-profile-menu .dropdown .btn, .my-profile-menu .dropdown .btn:hover, .my-profile-menu .dropdown .btn:focus {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    box-shadow: none;
+    outline: none;
+}
+
+.my-profile-menu .dropdown-item {
+    font-size: 13px;
+}
+
+.btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show>.btn-success.dropdown-toggle:focus{
+    box-shadow: none!important;
+}
+.p-name .show>.btn-success.dropdown-toggle,  .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+    color: #fff !important;
+    background-color:transparent !important;
+    border-color: transparent !important;
+}
+.search-section {
+    width: 20%;
+}
+
+.search-section img {
+    height: 15px;
+    position: absolute;
+    right: 15px;
+}
+
+.search-section {
+    position: relative;
+}
