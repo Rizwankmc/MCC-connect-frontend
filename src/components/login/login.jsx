@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { Form, Button } from "react-bootstrap";
 import "./login.css";
 
@@ -28,7 +29,7 @@ const Login = () => {
           <Button variant="primary" type="submit">
             Submit
           </Button>
-		  <h6>Don't have an account? <span>Signup</span></h6>
+		  <h6>Don't have an account? <Link to="/signup">Signup</Link></h6>
         </Form>
       </div>
     <div className="circle-one"></div>
