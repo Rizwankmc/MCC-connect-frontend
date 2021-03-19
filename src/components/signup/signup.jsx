@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import "./signup.css";
 
@@ -8,7 +9,7 @@ const Signup = () => {
       <div className="login-form">
         <h6>SignUp Form</h6>
         <Form>
-        <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="formBasicEmail">
             <Form.Label>User Name</Form.Label>
             <Form.Control type="email" placeholder="User Name" />
           </Form.Group>
@@ -25,24 +26,26 @@ const Signup = () => {
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control type="password" placeholder="Confirm Password" />
           </Form.Group>
-		  <div className="forget-pwd">
-		  <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Remember Me" />
-          </Form.Group>
-		  <h6>Forget Password</h6>
-		  </div>
-         
+          <div className="forget-pwd">
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Remember Me" />
+            </Form.Group>
+            <h6>Forget Password</h6>
+          </div>
+
           <Button variant="primary" type="submit">
             Submit
           </Button>
-		  <h6>Don't have an account? <span>Signup</span></h6>
+          <h6>
+            Do  you have an account? <Link to="/login">Login here</Link>
+          </h6>
         </Form>
       </div>
-    <div className="circle-one"></div>
-	<div className="circle-two"></div>
-    <div className="circle-three"></div>
-	<div className="circle-four"></div>
-	</div>
+      <div className="circle-one"></div>
+      <div className="circle-two"></div>
+      <div className="circle-three"></div>
+      <div className="circle-four"></div>
+    </div>
   );
 };
 export default Signup;

@@ -1,6 +1,7 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import Login from './components/login/login';
 import Home from './components/home/index';
 import Signup from './components/signup/signup.jsx';
@@ -12,14 +13,15 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path='/' exact component={Landing} />
-          <Route path='/dashboard' exact component={Home} />
-          <Route path='/login' exact component={Login} />
-          <Route path='/singup ' exact component={Signup} />
-          <Route path='/error' exact component={Page404} />
+          <Route path='/' exact component={ Landing } />
+          <Route path='/dashboard' exact component={ Home } />
+          <Route path='/login' exact component={ Login } />
+          <Route path='/singup' exact component={ Signup } />
+          <Route path='/*' exact component={ Page404 } />
           
         </Switch>
       </Router>
+      <Toaster />
     </div>
   );
 }

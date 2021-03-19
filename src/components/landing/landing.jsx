@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import LandingHeader from './header';
 import aboutimg from '../../assets/about-1.jpg'
@@ -27,7 +28,7 @@ const Landing = () => {
                     <h2>We Are A Creative Digital Agency Focused on Growing Brands Online</h2>
                     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
                     <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
-                    <a href="#" class="btn fancy-outline fancy-dark">Read More</a>
+                    <Link to="/" class="btn fancy-outline fancy-dark">Read More</Link>
                     </div>
                    </div> 
                    <div className="col-12 col-lg-6 col-xl-5 ml-xl-auto">

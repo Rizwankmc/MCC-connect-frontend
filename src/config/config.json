@@ -1,0 +1,14 @@
+{
+    "development": {
+        "server": "http://localhost:8080/api",
+        "client": "http://localhost:3000/"
+    },
+    "staging": {
+        "server": "http://18.188.190.204:3001/api",
+        "client": "http://18.188.190.204/"
+    },
+    "production": {
+        "server": "http://18.188.190.204:3001/api",
+        "client": "http://18.188.190.204/"
+    }
+}
