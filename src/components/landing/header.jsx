@@ -1,5 +1,6 @@
 import React from "react-bootstrap";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const LandingHeader = () => {
   return (
@@ -17,7 +18,7 @@ const LandingHeader = () => {
             </Nav>
             <div className="login-area">
             <Nav className="mr-auto">
-              <Button className="fancy-btn">Login</Button>
+              <Link to="/login" className="fancy-btn">Login</Link>
              
             </Nav> 
             </div>

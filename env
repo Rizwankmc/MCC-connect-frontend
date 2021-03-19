@@ -1,1 +1,29 @@
 SKIP_PREFLIGHT_CHECK=true
+PORT = 8080
+NODE_ENV = "development"
+JWT_SECRET = "mysecret"
+MONGO_URL = mongodb+srv://admin:Welcome123@rizwan.xieaa.mongodb.net/playerLounge?retryWrites=true&w=majority
+SENTRY_DSN = https://4495945c05294e69b1ffad2a5ae373bd@o503594.ingest.sentry.io/5588939
+
+SENDGRID_API_KEY = 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
+
+S3_ID = AKIAWFTM346Y35PMDXJA
+S3_SECRET =  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
+S3_BUCKET_NAME = playerloungestorage
+
+mongodb://Admin:Marko_786@18.188.190.204:27017/admin
+
+REFRESH_SECRET = mysecret
+
+CLIENT = http://localhost:3000/deposit
+SERVER = http://localhost:8080/api
+
+PAYPAL_CLIENT_ID = AbyCl92msU5bAI4zUmCT3lVrgMGSKTjO7Ts09qDklzvkax_-XFpjOMG25fZB_GRFEHDACMNvilaMgm6w
+PAYPAL_CLIENT_SECRET = EAyWvBK4kp0PMeNy6TTPvcnRL5frUkYJY4MjRdejCavZkcBmoaxrZ_ShgzmXYImAVz_rqksBIfFybdS5
+PAYPAL_MODE = "sandbox"
+
+STRIPE = sk_test_4eC39HqLyjWDarjtT1zdp7dc 
+
+VERIFY_TEMPLATE = d-dd76ba11392f456eb60cfe32077b2812
+FORGET_TEMPLATE = d-11f2cd4546114c9f9a36c5469d700cc0 
+WELCOME_TEMPLATE = d-99dce1b5891f442384daffcffbb1e6c5
