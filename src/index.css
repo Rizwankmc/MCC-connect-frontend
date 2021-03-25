@@ -13,3 +13,10 @@ code {
   max-width: 1280px !important;
   width: 100%;
 }
+button.btn.btn-primary {
+  background-color: #024c39;
+  border: 1px solid #024c39;
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-size: 13px;
+}

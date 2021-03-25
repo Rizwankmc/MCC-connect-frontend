@@ -68,6 +68,7 @@ const JobList = () => {
         <i class="fas fa-plus"></i>
         </div>
         </div>
+       
         <div className="view-more">
             <p>View More </p>
         </div>

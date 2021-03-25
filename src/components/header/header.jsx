@@ -13,6 +13,11 @@ import user from '../../assets/user.jpg'
 import './header.css';
 
 const Header = () => {
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    window.location.href= '/'
+  }
   return (
     <div className="header">
       <Navbar bg="light" expand="lg">
@@ -58,7 +63,7 @@ const Header = () => {
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <Dropdown.Item>My Account</Dropdown.Item>
-                    <Dropdown.Item>Logout</Dropdown.Item>
+                    <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </div>

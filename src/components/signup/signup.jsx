@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import "./signup.css";
 import { userInstance } from "../../axios";
+import { useHistory } from 'react-router-dom';
 import toast from "react-hot-toast";
 
 const Signup = () => {
+  const history = useHistory();
   const [ value, setValue] = useState({
-    name: '',
+    username: '',
     email: '',
     password: '',
     confirmPassword: ''
@@ -20,11 +22,15 @@ const Signup = () => {
       [e.target.name]:e.target.value
     })
   }
-  const handleSingUp = async(e) => {
+  const handleSignUp = async(e) => {
     e.preventDefault();
     const res = await userInstance.post('auth/register/user', value);
     if (res.data.code === 200){
       toast.success("Resgistration Successful!!");
+      history.push({
+        pathname:'/otpverify',
+        state: {email: value.email, forget:false}
+      })
     }else {
       toast.error("Some error occurd");
     }
@@ -39,22 +45,22 @@ const Signup = () => {
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>User Name</Form.Label>
-            <Form.Control name="name" type="name" placeholder="User Name" />
+            <Form.Control name="username" type="name" placeholder="User Name" onChange={handleChange} />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control name="email" type="email" placeholder="Enter email" />
+            <Form.Control name="email" type="email" placeholder="Enter email" onChange={handleChange} />
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control name="password" type="password" placeholder="Password" />
+            <Form.Control name="password" type="password" placeholder="Password" onChange={handleChange} />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Confirm Password</Form.Label>
-            <Form.Control name="confirmPassword" type="password" placeholder="Confirm Password" />
+            <Form.Control name="confirmPassword" type="password" placeholder="Confirm Password" onChange={handleChange} />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onClick={handleSignUp}>
             Submit
           </Button>
           <h6>

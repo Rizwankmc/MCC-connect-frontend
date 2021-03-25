@@ -8,53 +8,56 @@
   margin: 0px auto;
   padding: 50px 70px;
   border-radius: 10px;
-  background-color: white;
+  background-color:  black;
   background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
-  border-left: 2px solid #e8f0fe;
-  border-top: 2px solid #e8f0fe;
+  border-left: 2px solid #c7bfc7;
+  border-top: 2px solid #c7bfc7;
 }
 .login-page {
   background-color: black;
   height: 100%;
   padding: 100px 0px;
-  /* background: linear-gradient(to top right, #064d93, #313e4b); */
-  background:linear-gradient(to top right, #000000, #262f71);
+  background: linear-gradient(to top right, #415efa, #e2497f);
+  /* background:linear-gradient(to top right, #000000, #262f71); */
+  /* background-image: linear-gradient(80deg,#e9e0e1 5%,#d1e9f3 49%,#ebeafa 60%,#e9e0e1 95%); */
 }
 .circle-one {
   left: 25%;
   position: absolute;
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
   background-color: #0f72a1;
   top: 40px;
-  border-radius: 50%;
+  border-radius: 10px;
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
 }
 .circle-two {
-  right: 24%;
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  background-color: #ff194a;
-  bottom: 60px;
-  /* margin-bottom: 0px; */
-  border-radius: 50%;
+  right: 26%;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-color: #ff194a;
+    bottom: 30px;
+    /* margin-bottom: 0px; */
+    border-radius: 10px;
+    background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
 }
 
 
 
-.login-form h6 {font-size: 25px;margin-bottom: 0px;color: white;font-weight: 500;}
+.login-form h6 {font-size: 25px;margin-bottom: 0px;color:  rgb(255, 255, 255);font-weight: 600;}
 
 .login-form p {
     font-size: 14px;
-    color: white;
+    color:  black;
     font-weight: 300;
 }
 
 .login-form .form-group label {
-    color: white;
-    font-weight: 300;
+    color:  black;
+    font-weight: 500;
     margin-bottom: 0px;
-    font-size: 13px;
+    font-size: 14px;
 }
 .login-form form {
     padding-top: 25px;
@@ -62,11 +65,11 @@
 .login-form button {
   background-color: #ff194a !important;
   border: 1px solid #ff194a !important;
-  width: 100%;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 20px;
+  width: 100% !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  border-radius: 5px !important;
+  margin-top: 20px !important;
 }
 .login-form button:focus{
   outline: none;
@@ -81,12 +84,12 @@
 }
 .login-form form h6 {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 35px;
   text-align: center;
 }
 
-.login-form form h6 span {
+.login-form form h6 a {
   color: #f10638;
   font-weight: 500;
 }
@@ -106,6 +109,9 @@
   cursor: pointer;
   font-size: 13px !important;
 }
+.forget-pwd h6 a{
+  color: rgb(0, 0, 0) !important;
+}
 .circle-three {
   right: 24%;
   height: 80px;
@@ -114,13 +120,17 @@
   bottom: 0;
   border-radius: 50%;
   position: absolute;
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  
 }
 .circle-four {
-  left: 24%;
+  left: 22%;
   position: absolute;
   height: 80px;
   width: 80px;
-  background-color: #ff194a;
-  top: 0;
+  background-color: #b88dd1;
+  top: 12%;
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
   border-radius: 50%;
 }
+

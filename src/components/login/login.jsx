@@ -22,9 +22,9 @@ const Login = () => {
       window.location.href='/dashboard'
     }
     if(error) {
-      toast.success(error,{id:'A'});
+      toast.error(error,{id:'A'});
     }
-  }, [userInfo]);
+  }, [userInfo, error]);
 
   const handleChange = (e) => {
     setValue({
@@ -56,7 +56,7 @@ const Login = () => {
             <Form.Group controlId="formBasicCheckbox">
               <Form.Check type="checkbox" name="remember" label="Remember Me" onChange={handleChange}/>
             </Form.Group>
-            <h6>Forget Password</h6>
+            <h6><Link to="/forget">Forget Password </Link></h6>
           </div>
 
           <Button variant="primary" type="submit" >
