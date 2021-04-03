@@ -15,14 +15,14 @@ const Login = () => {
     })
 
   const userLogin = useSelector(state => state.userLogin);
-  const { userInfo, loading, error } = userLogin;
+  const { userInfo, error } = userLogin;
 
   useEffect(() => {
     if(userInfo) {
       window.location.href='/dashboard'
     }
-    if(error) {
-      toast.error(error,{id:'A'});
+    if(error && error.code === 404) {
+      toast.error(error.msg,{id:'A'});
     }
   }, [userInfo, error]);
 
