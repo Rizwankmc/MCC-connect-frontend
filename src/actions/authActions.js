@@ -14,7 +14,6 @@ export const login = (email, password , remember) => async (dispatch) => {
     });
     const { code } = data;
     if (code === 200) {
-      console.log(data)
       const { username, token } = data;
       const payload = {
         username,
@@ -27,18 +26,10 @@ export const login = (email, password , remember) => async (dispatch) => {
         type: constants.USER_LOGIN_SUCCESS,
         payload,
       });
-    }else if(code === 400){
-      dispatch({
-        type: constants.USER_LOGIN_FAIL,
-        payload: data
-      })
-      dispatch({
-        type: constants.USER_LOGOUT,
-      });
     } else {
       dispatch({
         type: constants.USER_LOGIN_FAIL,
-        payload: data.msg,
+        payload: data
       });
       dispatch({
         type: constants.USER_LOGOUT,

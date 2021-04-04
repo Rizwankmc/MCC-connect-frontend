@@ -12,8 +12,7 @@ const reducer = combineReducers({
   
 
 const initialState = {
-    userLogin: { userInfo: localStorage.getItem('token') ? JSON.parse(localStorage.getItem('token')) : null },
-    adminLogin: { adminInfo: localStorage.getItem('admintoken') ? JSON.parse(localStorage.getItem('admintoken')) : null }
+    userLogin: { userInfo: localStorage.getItem('token') ? JSON.parse(localStorage.getItem('token')) : null }
 };
 
 const middleWare = [thunk];

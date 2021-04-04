@@ -17,12 +17,11 @@ const Reset = () => {
   useEffect(() => {
     if(location.state){
       setResetPassword({
-        ...resetPassword, 
+        ...resetPassword,
         email: location.state
       });
-console.log("ffbfbncv", location.state)
     }
-    },[location])
+    },[location, resetPassword])
     
     const handleChange = (e) => {
       setResetPassword({
@@ -33,7 +32,6 @@ console.log("ffbfbncv", location.state)
 
   const handleResetPassword = async(e) => {
     e.preventDefault();
-    console.log("xvxnvxc", resetPassword);
     if (resetPassword.password !== resetPassword.confirmPassword){
 return toast.error("Password not match", {id: 'A'});
     }

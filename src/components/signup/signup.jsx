@@ -33,7 +33,7 @@ const Signup = () => {
         state: {email: value.email, forget:false}
       })
     }else {
-      toast.error("Some error occurd");
+      toast.error(res.data.msg);
     }
     // (singup(value.email, value.password, value.remember))
   }
