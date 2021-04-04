@@ -1,0 +1,11 @@
+.jobs-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0px;
+}
+.jobs-page .show-post:first-child{
+    margin-top: 0px !important;
+}
+.jobs-page .most-viewrd:first-child{
+    margin-top: 0px;
+}

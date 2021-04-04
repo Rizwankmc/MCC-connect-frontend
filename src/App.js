@@ -10,6 +10,8 @@ import Page404 from './components/404';
 import Forget from './components/forget/forget'
 import OtpVerify from './components/optverify/otpverify'
 import ResetPassword from './components/reset/reset';
+import Profile from './components/profile/profile';
+import Jobs from './components/jobs/jobs';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path='/forget' exact component={ Forget } />
           <Route path='/otpverify' exact component={ OtpVerify } />
           <Route path='/resetPassword' exact component={ ResetPassword } />
+          <Route path='/profile' exact component={ Profile } />
+          <Route path='/jobs' exact component={ Jobs } />
           <Route path='/*' exact component={ Page404 } />
           
         </Switch>

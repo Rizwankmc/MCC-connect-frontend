@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import { Nav, Navbar, Form, FormControl, Dropdown } from "react-bootstrap";
 import logo from '../../assets/logo.png'
 import home from '../../assets/icon1.png'
@@ -11,8 +12,12 @@ import notification from '../../assets/icon7.png'
 import search from '../../assets/search.png'
 import user from '../../assets/user.jpg'
 import './header.css';
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const userDetails = useSelector(state => state.userDetail);
+  const { loading, profileInfo } = userDetails;
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('userId');
@@ -46,8 +51,8 @@ const Header = () => {
               <span><img src={company} alt="home" /> </span>
                   Companies</Nav.Link>
               <Nav.Link href="#link"><span><img src={project} alt="home" /> </span>Projects</Nav.Link>
-              <Nav.Link href="#link"><span><img src={profile} alt="home" /> </span>Profiles</Nav.Link>
-              <Nav.Link href="#link"><span><img src={jobs} alt="home" /> </span>Jobs</Nav.Link>
+              <Link className="nav-link" to="/profile"><span><img src={profile} alt="home" /> </span>Profiles</Link>
+              <Link className="nav-link" to="/jobs"><span><img src={jobs} alt="home" /> </span>Jobs</Link>
               <Nav.Link href="#link"><span><img src={message} alt="home" /> </span>Messages</Nav.Link>
               <Nav.Link href="#link"><span><img src={notification} alt="home" /> </span>Notification</Nav.Link>
             </Nav>
@@ -59,7 +64,7 @@ const Header = () => {
               <div className="p-name">
                 <Dropdown>
                   <Dropdown.Toggle variant="success" id="dropdown-profile">
-                    John
+                   {profileInfo && profileInfo.username}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <Dropdown.Item>My Account</Dropdown.Item>

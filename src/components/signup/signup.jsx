@@ -6,6 +6,7 @@ import { userInstance } from "../../axios";
 import { useHistory } from 'react-router-dom';
 import toast from "react-hot-toast";
 
+
 const Signup = () => {
   const history = useHistory();
   const [ value, setValue] = useState({
