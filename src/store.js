@@ -2,10 +2,12 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import {userLoginReducers} from './reducers/authReducers';
+import { userDetailReducers } from './reducers/userReducer';
 
   // reducer calll like state name: reducername
 const reducer = combineReducers({
-    userLogin : userLoginReducers
+    userLogin : userLoginReducers,
+    userDetail:  userDetailReducers,
 })
   
 

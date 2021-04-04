@@ -6,17 +6,6 @@ import user from "../../assets/user.jpg";
 const Post = () => {
   return (
     <>
-      <div className="post-area glass-css">
-        <div className="user-img">
-          <img src={user} alt="userimg" />
-          <input type="text" placeholder="Write your Post here...." />
-        </div>
-        <div className="post-button">
-          <Button variant="primary" type="submit">
-            Post here
-          </Button>
-        </div>
-      </div>
       <div className="show-post">
         <div className="show-post-area glass-css">
           <div className="post-user">
@@ -72,6 +61,12 @@ const Post = () => {
                 magna sit amet...
               </p>
               <h5>View More <i class="fal fa-angle-right"></i></h5>
+            </div>
+            <div className="tag">
+              <h6>HTML</h6>
+              <h6>Php</h6>
+              <h6>CSS</h6>
+              <h6>JavaScript</h6>
             </div>
          <div className="comment-area">
              <div className="like-comment">
@@ -146,6 +141,12 @@ const Post = () => {
                 magna sit amet...
               </p>
               <h5>View More <i class="fal fa-angle-right"></i></h5>
+            </div>
+            <div className="tag">
+              <h6>HTML</h6>
+              <h6>Php</h6>
+              <h6>CSS</h6>
+              <h6>JavaScript</h6>
             </div>
          <div className="comment-area">
              <div className="like-comment">
