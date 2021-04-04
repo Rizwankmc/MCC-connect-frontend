@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Link} from 'react-router-dom'
 import { Nav, Navbar, Form, FormControl, Dropdown } from "react-bootstrap";
-import logo from '../../assets/logo.png'
+import { useDispatch, useSelector } from "react-redux";
+import logo from '../../assets/logo-white.png'
 import home from '../../assets/icon1.png'
 import company from '../../assets/icon2.png'
 import project from '../../assets/icon3.png'
@@ -12,11 +13,18 @@ import notification from '../../assets/icon7.png'
 import search from '../../assets/search.png'
 import user from '../../assets/user.jpg'
 import './header.css';
-import { useSelector } from "react-redux";
+import { getUserProfile } from "../../actions/userAction";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const userId = localStorage.getItem('userId');
+    if (userId) {
+      dispatch(getUserProfile(userId))
+    }
+  }, [dispatch])
   const userDetails = useSelector(state => state.userDetail);
-  const { loading, profileInfo } = userDetails;
+  const { profileInfo } = userDetails;
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -51,7 +59,7 @@ const Header = () => {
               <span><img src={company} alt="home" /> </span>
                   Companies</Nav.Link>
               <Nav.Link href="#link"><span><img src={project} alt="home" /> </span>Projects</Nav.Link>
-              <Link className="nav-link" to="/profile"><span><img src={profile} alt="home" /> </span>Profiles</Link>
+              <Link className="nav-link" to="/topProfile"><span><img src={profile} alt="home" /> </span>Top Profiles</Link>
               <Link className="nav-link" to="/jobs"><span><img src={jobs} alt="home" /> </span>Jobs</Link>
               <Nav.Link href="#link"><span><img src={message} alt="home" /> </span>Messages</Nav.Link>
               <Nav.Link href="#link"><span><img src={notification} alt="home" /> </span>Notification</Nav.Link>
@@ -67,7 +75,7 @@ const Header = () => {
                    {profileInfo && profileInfo.username}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item>My Account</Dropdown.Item>
+                    <Link to='/profile'>My Account</Link>
                     <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

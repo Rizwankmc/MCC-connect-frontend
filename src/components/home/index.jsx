@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Layout from "../layout/layout";
 import ProfileSection from "./profileSection";
 import Post from "./post";
@@ -7,19 +7,10 @@ import JobList from "./topJobs";
 import PostSlider from './postslider';
 import "./index.css";
 import MostViewed from "./mostViewed";
-import { getUserProfile } from "../../actions/userAction";
-import { useDispatch } from "react-redux";
 import UploadPost from "./uploadPost";
 
 
 const Home = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    const userId = localStorage.getItem('userId');
-    if(userId) {
-      dispatch(getUserProfile(userId))
-    }
-  },[dispatch])
   return (
     <Layout>
       <div className="main-page">
