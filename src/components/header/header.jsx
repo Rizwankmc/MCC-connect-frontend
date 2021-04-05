@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom'
 import { Nav, Navbar, Form, FormControl, Dropdown } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,6 +16,7 @@ import './header.css';
 import { getUserProfile } from "../../actions/userAction";
 
 const Header = () => {
+
   const dispatch = useDispatch();
   useEffect(() => {
     const userId = localStorage.getItem('userId');
@@ -67,7 +68,8 @@ const Header = () => {
           </Navbar.Collapse>
           <div className="my-profile-menu">
               <div className="p-pic">
-                <img src={user} alt="user" />
+              <img src={ profileInfo && profileInfo.photo !== 'user/default.png'
+         ? 'http://localhost:8080/'+profileInfo.photo :  user} alt="user" />
               </div>
               <div className="p-name">
                 <Dropdown>
@@ -75,7 +77,7 @@ const Header = () => {
                    {profileInfo && profileInfo.username}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Link to='/profile'>My Account</Link>
+                    <Link className="dropdown-item" to='/profile'>My Account</Link>
                     <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

@@ -1,9 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 const AboutUser = () => {
+    const userDetail = useSelector(state => state.userDetail);
+    const { profileInfo } = userDetail;
     return(
         <div className="about-empolyee glass-css">
-            <h6>John Doe</h6>
+            <h6>{profileInfo && profileInfo.username}</h6>
             <p>Graphic Designer at Self Employed</p>
             <div className="reviews">
             <i class="fa fa-star" aria-hidden="true"></i>
