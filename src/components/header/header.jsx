@@ -36,7 +36,7 @@ const Header = () => {
     <div className="header">
       <Navbar bg="light" expand="lg">
         <div className="container-fluid">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/dashboard">
               <img src= {logo} alt="lgogo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -52,7 +52,7 @@ const Header = () => {
           </div>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="#home">
+              <Nav.Link href="/dashboard">
              <span><img src={home} alt="home" /> </span>
                   Home
                   </Nav.Link>
